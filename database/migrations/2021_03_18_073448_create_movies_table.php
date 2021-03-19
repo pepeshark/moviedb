@@ -15,6 +15,15 @@ class CreateMoviesTable extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->unsignedInteger('runtime')->nullable();
+            $table->date('release_date')->nullable();
+            $table->string('poster_path')->nullable();
+            $table->text('overview')->nullable();
+            $table->unsignedBigInteger('tmdb_id');
+            $table->string('tmdb_url');
+            $table->decimal('tmdb_vote_avg', 2,1)->default(0);
+            $table->unsignedInteger('tmdb_vote_count')->default(0);
             $table->timestamps();
         });
     }

@@ -15,6 +15,10 @@ class CreateDirectorsTable extends Migration
     {
         Schema::create('directors', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->unsignedBigInteger('tmdb_id');
+            $table->date('birthday')->nullable();
+            $table->string('bio')->nullable();
             $table->timestamps();
         });
     }
