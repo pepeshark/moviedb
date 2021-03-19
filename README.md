@@ -4,7 +4,7 @@ It is a dummy project for themoviedb.org. You can see how to use ther API and pu
 
 #### Requirements
 
-Fist of all fill, please fill the environment variable. You can get here: https://www.themoviedb.org/settings/api
+Fist of all, please fill the environment variable. You can get here: https://www.themoviedb.org/settings/api
 
 ```bash
 MOVIE_DB_API_KEY=
