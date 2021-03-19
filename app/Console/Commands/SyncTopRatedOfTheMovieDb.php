@@ -151,16 +151,12 @@ class SyncTopRatedOfTheMovieDb extends Command
                 'api_key' => config('app.movie_db_api_key'),
             ]);
 
-
             if ($response->successful()) {
                 $responseBody = json_decode($response->body());
-
                 if (isset($responseBody)) {
                     $director = [];
                     foreach ($responseBody->crew as $d) {
-
                         if ($d->job == 'Director') {
-
                             $director = new Director();
                             $director->name = $d->original_name;
                             $director->tmdb_id = $d->id;

@@ -15,6 +15,6 @@ class Director extends Model
 
     public function movies()
     {
-        return $this->belongsToMany(Movie::class, 'director_movie', 'director_id', 'movie_id');//->withPivot('director_movie');
+        return $this->belongsToMany(Movie::class, 'director_movie', 'director_id', 'movie_id');
     }
 }

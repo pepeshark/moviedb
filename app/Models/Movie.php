@@ -9,11 +9,6 @@ class Movie extends Model
 {
     use HasFactory;
 
-    public function directors()
-    {
-        $this->hasMany(Director::class);
-    }
-
     /**
      * Scope a query to only include empty runtime
      *
